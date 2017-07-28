@@ -18,7 +18,7 @@ public class SocketAPIResponse {
     public SocketAPIResponse(SocketDataPacket socketDataPacket) {
         this.socketDataPacket = socketDataPacket;
     }
-
+    //先通过socketDataPacket获取到响应body,转意为utf-8,包装为一个jsonObject对象
     public JSONObject jsonObject() {
         if( jsonObject == null ) {
             try {
@@ -33,10 +33,13 @@ public class SocketAPIResponse {
     public int statusCode() {
         jsonObject();
         try {
+//            如果为空异常
             if( jsonObject == null ) {
                 return NetworkAPIException.JSON_ERROR;
             }
+            //如果没有对应该errorCode的value,或者有但是value为null的,返回true
             else if( ! jsonObject.isNull("errorCode") ) {
+                //获取得到状态码
                 return jsonObject.getInt("errorCode");
             }
         } catch (JSONException e) {
