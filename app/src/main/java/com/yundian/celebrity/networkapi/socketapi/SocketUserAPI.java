@@ -22,7 +22,10 @@ import java.util.HashMap;
  * Created by yaowang on 2017/2/20.
  */
 
+//真正执行网络操作的UserAPI
+//把设置参数的这些用户自定义的步骤封装给一个方法进去,具体请求连接的操作由SocketBaseAPI中的方法执行
 public class SocketUserAPI extends SocketBaseAPI implements UserAPI {
+//    判断socket通道有没有打开
     private void isNetBreak() {
         if (!SocketAPINettyBootstrap.getInstance().isOpen()) {
             ToastUtils.showShort("网络连接失败,请检查网络");

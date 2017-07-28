@@ -12,7 +12,7 @@ import com.yundian.celebrity.listener.OnAPIListener;
 /**
  * 用户相关API接口
  */
-
+//User接口,要求子类必须实现的方法
 public interface UserAPI {
     void login(String phone, String password, OnAPIListener<LoginReturnInfo> listener);
 

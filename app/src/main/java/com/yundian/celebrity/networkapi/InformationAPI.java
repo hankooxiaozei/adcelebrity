@@ -9,7 +9,7 @@ import com.yundian.celebrity.listener.OnAPIListener;
  * 信息获取
  *
  */
-
+//Information接口,要求子类必须实现的方法
 public interface InformationAPI {
 //    void newsinfo(String name, String code,int startnum,int endnum,int all, OnAPIListener<NewsInforModel> listener);
 //    void advInfo(String code,int all, OnAPIListener<AdvBeen> listener);

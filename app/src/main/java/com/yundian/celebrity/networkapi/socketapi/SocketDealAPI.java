@@ -32,6 +32,7 @@ import java.util.List;
 /**
  * Created by yaowang on 2017/2/20.
  */
+//真正执行网络操作的DealAPI
 
 public class SocketDealAPI extends SocketBaseAPI implements DealAPI {
 

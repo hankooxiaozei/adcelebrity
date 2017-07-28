@@ -14,6 +14,7 @@ import org.json.JSONObject;
  * @for your attention : none
  * @revise : none
  */
+//Socialize接口,要求子类必须实现的方法
 public interface SocializeAPI {
 
 

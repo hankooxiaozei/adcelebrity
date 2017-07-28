@@ -27,7 +27,7 @@ import java.util.List;
  * Created by yaowang on 2017/2/20.
  * 交易 行情相关接口
  */
-
+//Deal接口,要求子类必须实现的方法
 public interface DealAPI {
 
     //    //微信支付

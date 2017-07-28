@@ -1,5 +1,6 @@
 package com.yundian.celebrity.networkapi;
 
+//
 public interface NetworkAPIConstant {
 
     //改host只需要修改这个枚举值

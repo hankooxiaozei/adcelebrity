@@ -11,7 +11,8 @@ import com.yundian.celebrity.networkapi.socketapi.SocketReqeust.SocketAPIRequest
 /**
  * Created by yaowang on 2017/2/20.
  */
-
+//实现NetworkAPIFactory,实现了里面的方法
+    //并把自己交给NetworkAPIFactoryImpl维护
 public class SocketAPIFactoryImpl implements NetworkAPIFactory {
 
     private NetworkAPIConfig config;

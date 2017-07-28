@@ -1,6 +1,6 @@
 package com.yundian.celebrity.networkapi;
 
-
+//自定义的异常类
 public class NetworkAPIException extends Exception {
 
     public static final int INITCONFIG_ERROR = 100000;

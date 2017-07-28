@@ -70,9 +70,16 @@ public enum Host {
 //        return (short) 12300 ;
           //return (short) 16104 ;
 //         return (short) 16006; //用户端
-         return (short) 16016;  //明星端
+
+
+
+//         return (short) 16016;  //明星端
+
+
         //return (short) 16115 ;
         //return (short) 16008 ;
+
+        return (short) 16060;//本地调试
 
 //        return (short) 16001;
 //        return (short) 17002;

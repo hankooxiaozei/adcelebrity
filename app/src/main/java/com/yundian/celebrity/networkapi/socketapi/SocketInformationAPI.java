@@ -12,7 +12,7 @@ import java.util.HashMap;
 /**
  * Created by ysl.
  */
-
+//真正执行网络操作的InformationAPI
 public class SocketInformationAPI extends SocketBaseAPI implements InformationAPI {
 
     @Override

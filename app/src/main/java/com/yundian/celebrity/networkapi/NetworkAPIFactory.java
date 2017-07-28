@@ -1,5 +1,5 @@
 package com.yundian.celebrity.networkapi;
-
+//强制子类必须实现
 public interface NetworkAPIFactory {
     void initConfig(NetworkAPIConfig config);
 

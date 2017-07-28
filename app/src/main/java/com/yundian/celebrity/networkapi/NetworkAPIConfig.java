@@ -3,7 +3,7 @@ package com.yundian.celebrity.networkapi;
 import android.content.Context;
 
 import java.util.HashMap;
-
+//config类,用于初始化操作
 public class NetworkAPIConfig {
     public static String ContextKey = "ConfigContextKey";
     public static String UserIdKey = "ConfigUserIdKey";

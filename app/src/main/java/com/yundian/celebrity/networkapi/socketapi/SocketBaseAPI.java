@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * Created by yaowang on 2017/2/20.
  */
-
+//执行网络操作api的父类,必须继承他
 public class SocketBaseAPI {
 
     /**
@@ -71,6 +71,7 @@ public class SocketBaseAPI {
      * @param listener
      */
     public void requestEntity(SocketDataPacket socketDataPacket, final Class<?> cls, final OnAPIListener listener) {
+        //由APIManage的实例 开始一个Json请求
         SocketAPIRequestManage.getInstance().startJsonRequest(socketDataPacket, new OnAPIListener<SocketAPIResponse>() {
             @Override
             public void onError(Throwable ex ){
