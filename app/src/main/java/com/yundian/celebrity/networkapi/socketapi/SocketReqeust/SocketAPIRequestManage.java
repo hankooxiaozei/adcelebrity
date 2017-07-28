@@ -28,6 +28,7 @@ public class SocketAPIRequestManage {
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
+            //先检查所有的请求有没有超时的
             checkReqeustTimeout();
             handler.postDelayed(this, 1000);
         }
@@ -36,11 +37,13 @@ public class SocketAPIRequestManage {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
+                //弹出toast
                 case 1:
                     SocketAPIResponse socketAPIResponse = (SocketAPIResponse) msg.obj;
                     ResultCodeUtil.showEeorMsg(socketAPIResponse);
                     break;
                 case 2:
+
                     int errcode = (int) msg.obj;
                     ErrorCodeUtil.showEeorMsg(errcode);
                     break;

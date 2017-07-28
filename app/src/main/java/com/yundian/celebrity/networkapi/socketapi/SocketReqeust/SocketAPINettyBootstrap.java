@@ -41,7 +41,7 @@ public class SocketAPINettyBootstrap {
             socketChannel.writeAndFlush(object);
         }
     }
-
+    //开启一个子线程
     public void connect(final boolean tag) {
         new startConnectThread(tag).start();
 //        new Thread() {
@@ -98,9 +98,14 @@ public class SocketAPINettyBootstrap {
 
     public class startConnectThread extends Thread {
         boolean mtag ;
+//        设置一个布尔tag
         public startConnectThread(boolean tag) {
             mtag=tag;
         }
+
+//        ServerBootstrap实例中需要两个NioEventLoopGroup实例，分别为boss和work，有不同的分工：
+//                1、 boss负责请求的accept操作。
+//                2、 work负责请求的read、write和处理操作。
         @Override
         public void run() {
             EventLoopGroup eventLoopGroup = new NioEventLoopGroup();

@@ -6,7 +6,7 @@ import com.yundian.celebrity.networkapi.InformationAPI;
 import com.yundian.celebrity.networkapi.NetworkAPIConfig;
 import com.yundian.celebrity.networkapi.NetworkAPIFactory;
 import com.yundian.celebrity.networkapi.UserAPI;
-
+//各个模块的API工厂实现类
 public class NetworkHttpAPIFactoryImpl implements NetworkAPIFactory {
     private NetworkAPIConfig config;
     private static NetworkHttpAPIFactoryImpl networkHttpAPIFactory = null;
