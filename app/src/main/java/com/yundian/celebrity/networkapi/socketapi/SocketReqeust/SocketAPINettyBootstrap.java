@@ -103,9 +103,7 @@ public class SocketAPINettyBootstrap {
             mtag=tag;
         }
 
-//        ServerBootstrap实例中需要两个NioEventLoopGroup实例，分别为boss和work，有不同的分工：
-//                1、 boss负责请求的accept操作。
-//                2、 work负责请求的read、write和处理操作。
+
         @Override
         public void run() {
             EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
@@ -124,6 +122,7 @@ public class SocketAPINettyBootstrap {
                     socketChannel.pipeline().addLast(new SocketAPINettyHandler());
                 }
             });
+            //开启连接
             SocketAPINettyBootstrap.getInstance().startConnect(mtag,bootstrap,networkAPIConfig);
         }
     }
